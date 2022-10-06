@@ -1,5 +1,6 @@
 package com.petshop.service;
 
+import com.petshop.exeption.PetNaoEncontradoException;
 import com.petshop.model.Pet;
 import com.petshop.repository.PetShopRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +41,7 @@ public class PetShopService {
 
             repository.save(petDb);
         } else {
-            System.out.println("pet não encontrado");
+            throw new PetNaoEncontradoException();
         }
 
     }
