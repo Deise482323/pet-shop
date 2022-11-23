@@ -14,7 +14,7 @@
     <name>pet-shop</name>
     <description>pet-shop</description>
     <properties>
-        <java.version>17</java.version>
+        <java.version>11</java.version>
     </properties>
     <dependencies>
         <!--spring-->
@@ -43,10 +43,11 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-        <!--h2-->
+
         <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.3.4</version>
         </dependency>
         <!-- SWAGGER -->
         <dependency>
